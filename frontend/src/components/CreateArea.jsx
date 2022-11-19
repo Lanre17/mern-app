@@ -22,7 +22,7 @@ function CreateArea({addNote}) {
   async function submitNote(event) {
     
     await axios
-      .post("http://localhost:3001/api/notes", note)
+      .post("https://mernapplanre.herokuapp.com/api/notes", note)
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 
