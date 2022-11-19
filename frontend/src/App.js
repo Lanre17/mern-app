@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/api/notes")
+      .get("https://mernapplanre.herokuapp.com/notes")
       .then((res) => {
         console.log(res);
         setNotes(res.data);
