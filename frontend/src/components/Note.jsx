@@ -11,7 +11,7 @@ function Note({ id, title, content, onDelete}) {
   
   
   async function handleClick() {
-    await axios.delete(`https://mernapplanre.herokuapp.com/${id}`);
+    await axios.delete(`https://mernapplanre.herokuapp.com/api/notes/${id}`);
     onDelete(id);
   }
 
@@ -23,7 +23,7 @@ function Note({ id, title, content, onDelete}) {
 
   async function updateNote() {
     axios
-      .put(`https://mernapplanre.herokuapp.com/${id}`, { title: t, content: c})
+      .put(`https://mernapplanre.herokuapp.com/api/notes/${id}`, { title: t, content: c})
       .then((res) => { 
         console.log(res);
         editNote()
